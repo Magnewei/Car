@@ -2,13 +2,12 @@ package org.example;
 
 public class GasolineCar extends AFuelCar {
 
-
-   public GasolineCar(int kmPerLitre) {
-        super(kmPerLitre);
+    public GasolineCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPerLitre) {
+        super(registrationNumber, make, model, numberOfDoors, kmPerLitre);
     }
 
 
-
+    //Returns registration fee relative to the given object value of WhPrKm.
     public int getRegistrationFee() {
         final int registrationFee;
 
@@ -33,7 +32,10 @@ public class GasolineCar extends AFuelCar {
 
     @Override
     public String toString() {
-        String present1 = "This gasolinecar";
-        return "";
+
+        String superString = super.toString();
+        String presentCar1 = "and uses a fuel type of " + getFuelType() + "." + " The registration fee is " + getRegistrationFee()+".";
+        return superString + presentCar1;
+
     }
 }
