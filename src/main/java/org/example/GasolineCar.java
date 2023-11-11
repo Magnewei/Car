@@ -13,11 +13,16 @@ public class GasolineCar extends AFuelCar {
 
         if(kmPerLitre <= 50 && kmPerLitre >= 20) {
             return registrationFee = 330;
+
         } else if(kmPerLitre >= 15 && kmPerLitre <= 20) {
             return registrationFee = 1050;
 
+        } else if(kmPerLitre >= 10 && kmPerLitre < 15) {
+            return registrationFee = 2340;
+
         } else if(kmPerLitre  >= 5 && kmPerLitre <= 10) {
             return registrationFee = 5500;
+
         } else if(kmPerLitre <5){
             return registrationFee = 10470;
         } else {
